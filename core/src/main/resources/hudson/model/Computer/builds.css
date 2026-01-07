@@ -1,0 +1,6 @@
+.executor-build-link {
+  display: inline-block;
+  width: 100%;
+  box-sizing: border-box;
+  padding-right: 1.5rem;
+}

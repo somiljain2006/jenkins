@@ -23,7 +23,9 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 -->
 <?jelly escape-by-default='true'?>
-<j:jelly xmlns:j="jelly:core" xmlns:st="jelly:stapler" xmlns:d="jelly:define" xmlns:l="/lib/layout" xmlns:t="/lib/hudson" xmlns:f="/lib/form" xmlns:local="local">
+<j:jelly xmlns:j="jelly:core" xmlns:st="jelly:stapler" xmlns:d="jelly:define" xmlns:l="/lib/layout"
+         xmlns:t="/lib/hudson"
+         xmlns:local="local">
   <st:documentation>
     Displays the status of executors.
     <st:attribute name="computers">
@@ -112,7 +114,10 @@ THE SOFTWARE.
                     </td>
                     <td class="pane">
                       <j:if test="${exeparentcanread}">
-                          <a href="${rootURL}/${exe.url}" class="model-link inside" style="display: block;"><l:breakable value="${exe.displayName}"/></a>
+                          <a href="${rootURL}/${exe.url}"
+                             class="model-link inside executor-build-link">
+                              <l:breakable value="${exe.displayName}"/>
+                          </a>
                       </j:if>
                     </td>
                   </st:include>
